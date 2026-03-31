@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --surface : hsl(30, 38%, 92%);
+    --primary : hsl(158, 36%, 37%);
+    --primary-dark : hsl(158, 42%, 18%);
+    --light-bg: hsl(0, 0%, 100%);
+    --grey: hsl(228, 12%, 48%);
+    --black: hsl(212, 21%, 14%);
+    --fs-body: 14px;
+    --br-radius: .5rem;
+}
+
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--surface);
+    display: grid;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    padding-inline: 1rem;
+    margin-block: 3rem;
+    @media (min-width: 660px) {
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+}
+
+.card{
+    display: grid;
+    border-radius: var(--br-radius);
+    background: var(--light-bg);
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    @media (min-width: 660px) {
+        grid-template-columns: repeat(2, 1fr);
+         max-height: 480px;
+         max-width: 600px;
+    }
+}
+
+.card-image {
+    @media (min-width: 660px) {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image-desktop{
+    display: none;
+    @media (min-width: 660px) {
+        display: inline-flex;
+        max-height: 480px;
+    }
+    & img{
+        width: 100%;
+    }
+}
+
+.card-content{ 
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--grey);
+    @media (min-width: 660px) {
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+.card-content p:first-of-type {
+    font-size: .75rem;
+    line-height: 1.2;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.card-content h1 {
+    font-family: "Fraunces", serif;
+    color: var(--black);
+    font-size: 2rem;
+    line-height: 1.1;
+    @media (min-width:660px) {
+        font-size: 2.5rem;
+    }
+}
+
+.card-price{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card-price h3 {
+    color: var(--primary);
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    
+}
+
+.card-price h4 {
+    text-decoration: line-through;
+    color: var(--grey);
+    font-size: .75rem;
+}
+
+.btn {
+    display: inline-flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    color: var(--light-bg);
+    background: var(--primary);
+    padding: 1rem 2rem;
+    border-radius: var(--br-radius);
+}
+
+.btn h5 {
+    font-size: .75rem;
+}
+
+footer{
+    text-align: center; 
+}
