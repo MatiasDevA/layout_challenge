@@ -87,7 +87,7 @@ body{
     }
 }
 
-.card-content p:first-of-type {
+.card-content p:first-child {
     font-size: .75rem;
     line-height: 1.2;
     letter-spacing: .2rem;
@@ -110,14 +110,14 @@ body{
     align-items: center;
 }
 
-.card-price h3 {
+.card-price strong:first-of-type {
     color: var(--primary);
     font-family: "Fraunces", serif;
     font-size: 2rem;
     
 }
 
-.card-price h4 {
+.card-price strong:last-of-type {
     text-decoration: line-through;
     color: var(--grey);
     font-size: .75rem;
@@ -135,8 +135,9 @@ body{
     border-radius: var(--br-radius);
 }
 
-.btn h5 {
+.btn-text {
     font-size: .75rem;
+    letter-spacing: normal;
 }
 
 footer{
